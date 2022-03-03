@@ -31,9 +31,9 @@ if (process.env.NODE_ENV === "production") {
 }
 
 //StackOverflow suggestion https://stackoverflow.com/questions/49566059/service-worker-registration-error-unsupported-mime-type-text-html 
-app.get("/service-worker.js", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "public", "service-worker.js"));
-});
+// app.get("/service-worker.js", (req, res) => {
+//   res.sendFile(path.resolve(__dirname, "public", "service-worker.js"));
+// });
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
